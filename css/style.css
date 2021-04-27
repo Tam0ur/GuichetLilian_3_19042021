@@ -11,6 +11,20 @@ header h1 {
   text-align: center;
 }
 
+main {
+  margin-bottom: -20px;
+  background-color: #f6f6f6;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
 section:not(section:first-child) {
   padding: 15px;
 }
@@ -31,8 +45,53 @@ section:not(section:first-child) {
   padding: 15px;
   margin: 0;
 }
+.section__fonctionnement {
+  background-color: #fff;
+}
 .section__restaurants {
   background-color: #f6f6f6;
+}
+.section__menu {
+  position: relative;
+  top: -20px;
+  margin: 0;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  background-color: #f6f6f6;
+}
+.section__menu h3 {
+  text-transform: uppercase;
+  border-bottom: 3px solid #99E2D0;
+  width: 50px;
+  font-weight: lighter;
+}
+.section__menu div:not(div:first-child) {
+  overflow: hidden;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0px 2px 5px #d1d1d1;
+  text-overflow: ellipsis;
+  margin-bottom: 10px;
+}
+.section__menu div:not(div:first-child) * {
+  margin: 0;
+}
+.section__menu h2 {
+  font-family: "Shrikhand", cursive;
+}
+.section__menu h4 {
+  font-family: "Roboto", sans-serif;
+}
+.section__menu button {
+  margin-right: auto;
+  margin-left: 30%;
+  margin-top: 25px;
+}
+
+.prix__plats {
+  float: right;
+  font-weight: bold;
 }
 
 figure {
@@ -44,9 +103,7 @@ figure {
   margin-right: 0;
 }
 figure img {
-  width: 100%;
   height: 11em;
-  object-fit: cover;
 }
 figure figcaption {
   padding: 10px;
@@ -58,12 +115,16 @@ figure figcaption p {
 }
 
 .btn__gradient {
+  width: 40%;
   color: #fff;
   padding: 12px;
   background: linear-gradient(#FF79DA, #9356DC);
   border-style: none;
   border-radius: 25px;
   box-shadow: 0px 3px 5px #c2c2c2;
+}
+.btn__gradient:hover {
+  background: linear-gradient(#9356DC, #FF79DA);
 }
 .btn__fonctionnement {
   margin-left: 10px;
@@ -100,6 +161,18 @@ figure figcaption p {
   left: -28px;
 }
 
+.fa-heart {
+  font-weight: 100;
+  float: right;
+}
+
+.fa-arrow-left {
+  position: absolute;
+  font-size: 1rem;
+  padding-left: 15px;
+  padding-top: 13px;
+}
+
 h1,
 h4 {
   font-family: "Shrikhand", cursive;
@@ -115,6 +188,7 @@ a:not(footer a) {
 }
 
 footer {
+  margin-top: 20px;
   padding: 20px;
   color: #fff;
   background-color: #2f2f2f;
