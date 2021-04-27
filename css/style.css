@@ -11,6 +11,16 @@ header h1 {
   text-align: center;
 }
 
+section:not(section:first-child) {
+  padding: 15px;
+}
+
+#header__shadow {
+  position: relative;
+  padding-bottom: 0.1px;
+  box-shadow: 0px 2px 2px #cacaca;
+}
+
 .section__intro {
   background-color: #f6f6f6;
   text-align: center;
@@ -19,6 +29,7 @@ header h1 {
 .section__intro p:not(p:nth-child(3)) {
   background-color: #eaeaea;
   padding: 15px;
+  margin: 0;
 }
 .section__restaurants {
   background-color: #f6f6f6;
@@ -46,7 +57,7 @@ figure figcaption p {
   padding: 2px;
 }
 
-.btn__purple {
+.btn__gradient {
   color: #fff;
   padding: 12px;
   background: linear-gradient(#FF79DA, #9356DC);
@@ -55,9 +66,10 @@ figure figcaption p {
   box-shadow: 0px 3px 5px #c2c2c2;
 }
 .btn__fonctionnement {
+  margin-left: 10px;
   text-align: left;
   font-weight: bold;
-  width: 100%;
+  width: 98%;
   background-color: #f6f6f6;
   margin-bottom: 15px;
   border-style: none;
@@ -66,7 +78,26 @@ figure figcaption p {
   padding: 18px;
 }
 .btn__fonctionnement i {
+  position: relative;
+  left: -12px;
   color: #7e7e7e;
+}
+.btn__fonctionnement:hover {
+  background-color: #f5edff;
+}
+.btn__fonctionnement:hover i {
+  color: #9356DC;
+}
+
+.nbr__purple {
+  position: relative;
+  color: #fff;
+  background-color: #9356DC;
+  padding: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 500px;
+  left: -28px;
 }
 
 h1,
