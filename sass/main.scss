@@ -7,8 +7,6 @@
 /**/
 @import "./utils/variables";
 
-
-
 /*HEADER*/
 header {
   h1 {
@@ -16,7 +14,18 @@ header {
   }
 }
 
+section:not(section:first-child) {
+  padding: 15px;
+}
+
+#header__shadow {
+  position: relative;
+  padding-bottom: 0.1px;
+  box-shadow: 0px 2px 2px rgb(202, 202, 202);
+}
+
 .section {
+  
   &__intro {
     background-color: $color-grey;
     text-align: center;
@@ -25,6 +34,7 @@ header {
     p:not(p:nth-child(3)) {
       background-color: #eaeaea;
       padding: 15px;
+      margin: 0;
     }
   }
   &__restaurants {
@@ -57,7 +67,7 @@ figure {
 }
 
 .btn {
-  &__purple {
+  &__gradient {
     color: #fff;
     padding: 12px;
     background: linear-gradient($color-secondary, $color-primary);
@@ -66,9 +76,10 @@ figure {
     box-shadow: 0px 3px 5px rgb(194, 194, 194);
   }
   &__fonctionnement {
+    margin-left: 10px;
     text-align: left;
     font-weight: bold;
-    width: 100%;
+    width: 98%;
     background-color: $color-grey;
     margin-bottom: 15px;
 
@@ -76,11 +87,32 @@ figure {
     border-radius: 15px;
     box-shadow: 0px 2px 5px rgb(194, 194, 194);
     padding: 18px;
+    
     i {
+      position: relative;
+      left: -12px;
       color: #7e7e7e;
+    }
+    &:hover{
+      background-color: #f5edff;
+      i {
+        color: $color-primary;
+      }
     }
   }
 }
+
+.nbr__purple{
+  position: relative;
+  color: #fff;
+  background-color: $color-primary;
+  padding: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 500px;
+  left: -28px;
+}
+
 
 h1,
 h4 {
