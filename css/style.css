@@ -48,6 +48,7 @@ section:not(section:first-child) {
 }
 .section__fonctionnement {
   background-color: #fff;
+  display: block;
 }
 .section__restaurants {
   background-color: #f6f6f6;
@@ -67,6 +68,7 @@ section:not(section:first-child) {
   font-weight: lighter;
 }
 .section__menu div:not(div:first-child) {
+  display: block;
   overflow: hidden;
   padding: 15px;
   background-color: #fff;
