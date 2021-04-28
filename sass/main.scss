@@ -50,6 +50,7 @@ section:not(section:first-child) {
   }
   &__fonctionnement{
     background-color: #fff;
+    display: block;
   }
   &__restaurants {
     background-color: $color-grey;
@@ -70,6 +71,9 @@ section:not(section:first-child) {
       
     }
     div:not(div:first-child){
+      display: block;
+
+
       overflow: hidden;
       padding : 15px;
       
@@ -194,6 +198,7 @@ a:not(footer a) {
 }
 
 footer {
+  
   margin-top: 20px;
   padding: 20px;
   color: #fff;
