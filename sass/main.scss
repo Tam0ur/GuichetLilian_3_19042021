@@ -7,6 +7,7 @@
 /**/
 @import "./utils/variables";
 
+
 /*HEADER*/
 header {
   h1 {
@@ -21,6 +22,7 @@ button { &:hover { cursor: pointer;}}
 img {
   width: 100%;
   object-fit: cover;
+  height: 15em;
 }
 
 section:not(section:first-child) {
@@ -89,7 +91,6 @@ section:not(section:first-child) {
 .prix__plats{
   float: right;
   font-weight: bold;
-  
 }
 
 figure {
