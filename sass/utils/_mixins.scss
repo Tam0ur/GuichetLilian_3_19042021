@@ -1,0 +1,17 @@
+/*MIXINS*/
+
+.nbr__purple{
+    position: relative;
+    color: #fff;
+    background-color: $color-primary;
+    padding: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 500px;
+    left: -28px;
+  }
+
+  .prix__plats{
+    float: right;
+    font-weight: bold;
+  }
