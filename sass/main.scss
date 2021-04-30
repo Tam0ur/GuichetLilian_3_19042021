@@ -2,41 +2,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-@import "./base/base";
 
-/**/
 @import "./utils/variables";
+@import "./utils/functions";
+@import "./utils/mixins";
+@import "./utils/extensions";
+
+@import "./base/base";
+@import "./base/typography";
+
+@import "./components/buttons";
+
+@import "./layouts/header";
+@import "./layouts/footer";
+@import "./layouts/nav";
+@import "./layouts/container";
+@import "./layouts/form";
+
+@import "./pages/work";
+@import "./pages/about";
+@import "./pages/project";
 
 
-/*HEADER*/
-header {
-  h1 {
-    text-align: center;
-  }
-}
-
-main{ margin-bottom: -20px; background-color: $color-grey;}
-
-button { &:hover { cursor: pointer;}}
-
-img {
-  width: 100%;
-  object-fit: cover;
-  height: 15em;
-}
-
-section:not(section:first-child) {
-  padding: 15px;
-}
-
-#header__shadow {
-  position: relative;
-  padding-bottom: 0.1px;
-  box-shadow: 0px 2px 2px rgb(202, 202, 202);
-}
 
 .section {
-  
   &__intro {
     background-color: $color-grey;
     text-align: center;
@@ -92,10 +81,7 @@ section:not(section:first-child) {
   }
 }
 
-.prix__plats{
-  float: right;
-  font-weight: bold;
-}
+
 
 figure {
   background-color: #fff;
@@ -160,16 +146,7 @@ figure {
   }
 }
 
-.nbr__purple{
-  position: relative;
-  color: #fff;
-  background-color: $color-primary;
-  padding: 4px;
-  padding-left: 8px;
-  padding-right: 8px;
-  border-radius: 500px;
-  left: -28px;
-}
+
 
 .fa-heart{
   font-weight: 100;
@@ -180,40 +157,6 @@ figure {
   font-size: 1rem;
   padding-left: 15px;
   padding-top: 13px;
-}
-
-
-
-h1,
-h4 {
-  font-family: "Shrikhand", cursive;
-}
-* {
-  font-family: "Roboto", sans-serif;
-}
-
-a:not(footer a) {
-  color: #000;
-  text-decoration: none;
-}
-
-footer {
-  
-  margin-top: 20px;
-  padding: 20px;
-  color: #fff;
-  background-color: #2f2f2f;
-
-  & a {
-    padding: 4px;
-    color: #fff;
-    display: block;
-    width: 100%;
-    text-decoration: none;
-  }
-  * {
-    margin: 0;
-  }
 }
 
 /*TESTS*/
