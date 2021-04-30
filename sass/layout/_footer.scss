@@ -1,0 +1,18 @@
+/*FOOTER*/
+footer {
+  margin-top: 20px;
+  padding: 20px;
+  color: #fff;
+  background-color: #2f2f2f;
+
+  & a {
+    padding: 4px;
+    color: #fff;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+  }
+  * {
+    margin: 0;
+  }
+}
