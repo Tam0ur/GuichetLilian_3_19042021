@@ -1,14 +1,34 @@
 /*FONTS*/
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-body {
-  margin: 0;
+/*VARIABLES*/
+/*FUNCTIONS*/
+/*MIXINS*/
+.nbr__purple {
+  position: relative;
+  color: #fff;
+  background-color: #9356DC;
+  padding: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 500px;
+  left: -28px;
 }
 
-/**/
-/*HEADER*/
-header h1 {
-  text-align: center;
+.prix__plats {
+  float: right;
+  font-weight: bold;
+}
+
+/*EXTENSIONS*/
+/*BASE*/
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h4 {
+  font-family: "Shrikhand", cursive;
 }
 
 main {
@@ -16,8 +36,8 @@ main {
   background-color: #f6f6f6;
 }
 
-button:hover {
-  cursor: pointer;
+section:not(section:first-child) {
+  padding: 15px;
 }
 
 img {
@@ -26,8 +46,19 @@ img {
   height: 15em;
 }
 
-section:not(section:first-child) {
-  padding: 15px;
+/*TYPOGRAPHY*/
+body {
+  margin: 0;
+}
+
+/*BUTTONS*/
+button:hover {
+  cursor: pointer;
+}
+
+/*HEADER*/
+header h1 {
+  text-align: center;
 }
 
 #header__shadow {
@@ -36,6 +67,33 @@ section:not(section:first-child) {
   box-shadow: 0px 2px 2px #cacaca;
 }
 
+/*FOOTER*/
+footer {
+  margin-top: 20px;
+  padding: 20px;
+  color: #fff;
+  background-color: #2f2f2f;
+}
+footer a {
+  padding: 4px;
+  color: #fff;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+}
+footer * {
+  margin: 0;
+}
+
+/*NAV*/
+a:not(footer a) {
+  color: #000;
+  text-decoration: none;
+}
+
+/*WORK*/
+/*ABOUT*/
+/*PROJECT*/
 .section__intro {
   background-color: #f6f6f6;
   text-align: center;
@@ -90,11 +148,6 @@ section:not(section:first-child) {
   margin-right: auto;
   margin-left: 30%;
   margin-top: 25px;
-}
-
-.prix__plats {
-  float: right;
-  font-weight: bold;
 }
 
 figure {
@@ -153,17 +206,6 @@ figure figcaption p {
   color: #9356DC;
 }
 
-.nbr__purple {
-  position: relative;
-  color: #fff;
-  background-color: #9356DC;
-  padding: 4px;
-  padding-left: 8px;
-  padding-right: 8px;
-  border-radius: 500px;
-  left: -28px;
-}
-
 .fa-heart {
   font-weight: 100;
   float: right;
@@ -174,37 +216,6 @@ figure figcaption p {
   font-size: 1rem;
   padding-left: 15px;
   padding-top: 13px;
-}
-
-h1,
-h4 {
-  font-family: "Shrikhand", cursive;
-}
-
-* {
-  font-family: "Roboto", sans-serif;
-}
-
-a:not(footer a) {
-  color: #000;
-  text-decoration: none;
-}
-
-footer {
-  margin-top: 20px;
-  padding: 20px;
-  color: #fff;
-  background-color: #2f2f2f;
-}
-footer a {
-  padding: 4px;
-  color: #fff;
-  display: block;
-  width: 100%;
-  text-decoration: none;
-}
-footer * {
-  margin: 0;
 }
 
 /*TESTS*/
