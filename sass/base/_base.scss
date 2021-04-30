@@ -1,4 +1,25 @@
-body {
-    
-    margin: 0;
-  }
+/*BASE*/
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h4 {
+  font-family: "Shrikhand", cursive;
+}
+
+main {
+  margin-bottom: -20px;
+  background-color: $color-grey;
+}
+
+section:not(section:first-child) {
+  padding: 15px;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  height: 15em;
+}
