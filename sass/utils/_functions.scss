@@ -1,1 +1,5 @@
 /*FUNCTIONS*/
+@function function__lighten($color){
+    $color : lighten($color, 5%);
+    @return $color;
+}

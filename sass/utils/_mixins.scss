@@ -1,17 +1,126 @@
 /*MIXINS*/
 
-.nbr__purple{
-    position: relative;
-    color: #fff;
-    background-color: $color-primary;
-    padding: 4px;
-    padding-left: 8px;
-    padding-right: 8px;
-    border-radius: 500px;
-    left: -28px;
-  }
+@mixin nbr_purple {
+  position: relative;
+  color: #fff;
+  background-color: $color-primary;
+  padding: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 500px;
+  left: -28px;
+}
 
-  .prix__plats{
-    float: right;
+@mixin btn__gradient {
+  margin: 1%;
+    width: 40%;
+    color: #fff;
+    padding: 12px;
+    background: linear-gradient($color-secondary, $color-primary);
+    border-style: none;
+    border-radius: 25px;
+    box-shadow: 0px 3px 5px rgb(194, 194, 194);
+    &:hover {
+      background: linear-gradient(function__lighten($color-secondary),function__lighten($color-primary));
+      box-shadow: 0px 4px 5px rgb(139, 139, 139);
+    }
+}
+
+@mixin btn__fonctionnement {
+  
+    margin-left: 10px;
+    text-align: left;
     font-weight: bold;
+    width: 98%;
+    background-color: $color-grey;
+    margin-bottom: 15px;
+
+    border-style: none;
+    border-radius: 15px;
+    box-shadow: 0px 2px 5px rgb(194, 194, 194);
+    padding: 18px;
+
+    i {
+      position: relative;
+      left: -12px;
+      color: #7e7e7e;
+    }
+    &:hover {
+      background-color: #f5edff;
+      i {
+        color: $color-primary;
+      }
+    }
+  
+}
+
+@mixin section {
+  .section {
+    &__intro {
+      background-color: $color-grey;
+      text-align: center;
+
+      padding-bottom: 30px;
+      p:not(p:nth-child(3)) {
+        background-color: #eaeaea;
+        padding: 15px;
+        margin: 0;
+      }
+    }
+    &__fonctionnement {
+      background-color: #fff;
+      display: block;
+    }
+    &__restaurants {
+      background-color: $color-grey;
+    }
+    &__menu {
+      position: relative;
+      top: -20px;
+      margin: 0;
+      border-top-right-radius: 15px;
+      border-top-left-radius: 15px;
+      background-color: #f6f6f6;
+
+      
+      h3 {
+        text-transform: uppercase;
+        border-bottom: 3px solid $color-tertiary;
+        width: 50px;
+        font-weight: lighter;
+      }
+      div:not(div:first-child, .column) {
+        display: block;
+
+        overflow: hidden;
+        padding: 15px;
+
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0px 2px 5px #d1d1d1;
+        text-overflow: ellipsis;
+        margin-bottom: 10px;
+        * {
+          margin: 0;
+        }
+      }
+      h2 {
+        font-family: "Shrikhand", cursive;
+      }
+      h4 {
+        font-family: "Roboto", sans-serif;
+        text-align: initial;
+      }
+      p {
+        text-align: initial;
+      }
+      button {
+        margin-top: 25px;
+      }
+    }
   }
+}
+
+
+
+
