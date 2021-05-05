@@ -42,7 +42,7 @@ button:hover {
 
 .btn__gradient {
   margin: 1%;
-  width: 40%;
+  width: 50%;
   color: #fff;
   padding: 12px;
   background: linear-gradient(#FF79DA, #9356DC);
@@ -301,15 +301,25 @@ figure figcaption p {
   .section__restaurants h2 {
     width: 100%;
   }
-  .section__menu h2 {
+  .section__menu:not(h2) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  .section__menu:not(h2) h2 {
     width: 100%;
+  }
+  .section__menu:not(h2) .column {
+    width: 30%;
+    margin: 0;
+    display: block;
   }
 
   .btn__fonctionnement {
     width: 31%;
   }
   .btn__gradient {
-    width: 30%;
+    width: 25%;
   }
 }
 /*LAPTOP+DESKTOP*/
@@ -402,7 +412,7 @@ figure figcaption p {
     width: 100%;
   }
   .section__menu:not(h2) h3 {
-    width: 30%;
+    width: 50px;
   }
   .section__menu:not(h2) .column {
     width: 32%;
@@ -417,7 +427,7 @@ figure figcaption p {
     width: 31%;
   }
   .btn__gradient {
-    width: 30%;
+    width: 18%;
   }
 }
 /*FORM*/
