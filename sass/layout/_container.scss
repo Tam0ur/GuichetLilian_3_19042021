@@ -1,1 +1,132 @@
 /*CONTAINER*/
+
+figure {
+  background-color: #fff;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0px 2px 5px #d4d4d4;
+
+  margin-left: 0;
+  margin-right: 0;
+
+  img {
+    height: 10em;
+  }
+  figcaption {
+    h3,
+    p {
+      margin: 0;
+      padding: 2px;
+    }
+    padding: 10px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  @include section; 
+  
+}
+
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  img{
+    height: 15em;
+  }
+  div:not(div:first-child, .column) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  @include section; 
+  .section {
+    &__restaurants {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      a {
+        width: 48%;
+      }
+      h2 {
+        width: 100%;
+      }
+    }
+    
+    &__menu{
+      h2{
+        width: 100%;
+      }
+      
+      
+      
+    }
+  }
+  .btn {
+    &__fonctionnement {
+      width: 31%;
+    }
+    &__gradient{
+      width: 30%;
+    }
+  }
+}
+
+
+
+/*LAPTOP+DESKTOP*/
+@media all and (min-width: 1024px) {
+  @include section;
+  
+  img{
+    height: 20em;
+  }
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+  }
+  
+  .section {
+    &__restaurants {
+      
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      h2{
+        width: 100%;
+      }
+      a {
+        width: 24%;
+      }
+    }
+    
+    &__menu:not(h2){
+      
+      h2{
+        width: 100%;
+      }
+      h3{
+        width: 30%;
+      }
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      .column{
+        width: 32%;
+        margin: 0;
+        display: block;
+      }
+      div{
+        width: 90%;
+      }
+      
+    }
+  }
+  .btn {
+    &__fonctionnement {
+      width: 31%;
+    }
+    &__gradient{
+      width: 30%;
+    }
+  }
+}
