@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-
 @import "./utils/variables";
 @import "./utils/functions";
 @import "./utils/mixins";
@@ -12,6 +11,7 @@
 @import "./base/typography";
 
 @import "./components/buttons";
+@import "./components/span";
 
 @import "./layouts/header";
 @import "./layouts/footer";
@@ -23,140 +23,5 @@
 @import "./pages/about";
 @import "./pages/project";
 
-
-
-.section {
-  &__intro {
-    background-color: $color-grey;
-    text-align: center;
-
-    padding-bottom: 30px;
-    p:not(p:nth-child(3)) {
-      background-color: #eaeaea;
-      padding: 15px;
-      margin: 0;
-    }
-  }
-  &__fonctionnement{
-    background-color: #fff;
-    display: block;
-  }
-  &__restaurants {
-    background-color: $color-grey;
-  }
-  &__menu {
-    
-    position: relative;
-    top: -20px;
-    margin: 0;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
-    background-color : #f6f6f6;;
-    h3{
-      text-transform: uppercase;
-      border-bottom: 3px solid $color-tertiary;
-      width: 50px;
-      font-weight: lighter;
-      
-    }
-    div:not(div:first-child){
-      display: block;
-
-
-      overflow: hidden;
-      padding : 15px;
-      
-      background-color: #fff;
-      border-radius: 15px;
-      box-shadow: 0px 2px 5px #d1d1d1;
-      text-overflow: ellipsis;
-      margin-bottom: 10px;
-      * {
-        margin: 0;
-      }
-    }
-    h2 { font-family: "Shrikhand", cursive;}
-    h4 { font-family: "Roboto", sans-serif;}
-    button { margin-right:auto ; margin-left:30%; margin-top: 25px;}
-  }
-}
-
-
-
-figure {
-  background-color: #fff;
-  border-radius: 25px;
-  overflow: hidden;
-  box-shadow: 0px 2px 5px #d4d4d4;
-
-  margin-left: 0;
-  margin-right: 0;
-
-  img {
-    height: 11em;
-  }
-  figcaption {
-    h3,
-    p {
-      margin: 0;
-      padding: 2px;
-    }
-    padding: 10px;
-  }
-}
-
-.btn {
-  
-  &__gradient {
-    width: 40%;
-    color: #fff;
-    padding: 12px;
-    background: linear-gradient($color-secondary, $color-primary);
-    border-style: none;
-    border-radius: 25px;
-    box-shadow: 0px 3px 5px rgb(194, 194, 194);
-    &:hover{
-      background: linear-gradient($color-primary, $color-secondary);
-    }
-  }
-  &__fonctionnement {
-    margin-left: 10px;
-    text-align: left;
-    font-weight: bold;
-    width: 98%;
-    background-color: $color-grey;
-    margin-bottom: 15px;
-
-    border-style: none;
-    border-radius: 15px;
-    box-shadow: 0px 2px 5px rgb(194, 194, 194);
-    padding: 18px;
-    
-    i {
-      position: relative;
-      left: -12px;
-      color: #7e7e7e;
-    }
-    &:hover{
-      background-color: #f5edff;
-      i {
-        color: $color-primary;
-      }
-    }
-  }
-}
-
-
-
-.fa-heart{
-  font-weight: 100;
-  float: right;
-}
-.fa-arrow-left{
-  position: absolute;
-  font-size: 1rem;
-  padding-left: 15px;
-  padding-top: 13px;
-}
 
 /*TESTS*/
