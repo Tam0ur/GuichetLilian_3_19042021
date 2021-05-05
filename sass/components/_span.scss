@@ -1,0 +1,19 @@
+.prix__plats {
+  float: right;
+  font-weight: bold;
+}
+
+.fa-heart {
+  font-weight: 100;
+  float: right;
+}
+.fa-arrow-left {
+  position: absolute;
+  font-size: 1rem;
+  padding-left: 15px;
+  padding-top: 13px;
+}
+
+.nbr__purple {
+  @include nbr_purple();
+}

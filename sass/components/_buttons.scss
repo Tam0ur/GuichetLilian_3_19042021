@@ -4,3 +4,12 @@ button {
     cursor: pointer;
   }
 }
+
+.btn {
+  &__gradient{
+    @include btn__gradient;
+  }
+  &__fonctionnement {
+    @include btn__fonctionnement;
+  }
+}
