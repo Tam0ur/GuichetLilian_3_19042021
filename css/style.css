@@ -3,6 +3,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 /*VARIABLES*/
 /*FUNCTIONS*/
+/*KEYFRAMES*/
+.column:hover div {
+  animation: slideDown 1s;
+}
+
+div {
+  margin: 10px;
+  padding: 10px;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 /*MIXINS*/
 /*EXTENSIONS*/
 /*BASE*/
@@ -220,6 +240,11 @@ figure figcaption p {
   .section__menu button {
     margin-top: 25px;
   }
+
+  .btn__gradient-commande {
+    height: min-content;
+    transform: translate(50%);
+  }
 }
 @media all and (min-width: 768px) and (max-width: 1023px) {
   img {
@@ -301,16 +326,16 @@ figure figcaption p {
   .section__restaurants h2 {
     width: 100%;
   }
-  .section__menu:not(h2) {
+  .section__menu:not(h3) {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
   }
-  .section__menu:not(h2) h2 {
+  .section__menu:not(h3) h2 {
     width: 100%;
   }
-  .section__menu:not(h2) .column {
-    width: 30%;
+  .section__menu:not(h3) .column {
+    width: 49%;
     margin: 0;
     display: block;
   }
@@ -320,6 +345,10 @@ figure figcaption p {
   }
   .btn__gradient {
     width: 25%;
+  }
+  .btn__gradient-commande {
+    height: min-content;
+    transform: translate(-50%, 325%);
   }
 }
 /*LAPTOP+DESKTOP*/
@@ -428,6 +457,10 @@ figure figcaption p {
   }
   .btn__gradient {
     width: 18%;
+  }
+  .btn__gradient-commande {
+    height: min-content;
+    transform: translate(225%);
   }
 }
 /*FORM*/
