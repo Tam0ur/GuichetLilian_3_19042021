@@ -23,12 +23,16 @@ figure {
 }
 
 @media all and (max-width: 768px) {
-  @include section; 
-  
-}
+  @include section;
+  .btn__gradient-commande {
+      height: min-content;
+      transform: translate(50%);
+    }
+  }
+
 
 @media all and (min-width: 768px) and (max-width: 1023px) {
-  img{
+  img {
     height: 15em;
   }
   div:not(div:first-child, .column) {
@@ -36,7 +40,7 @@ figure {
     flex-direction: row;
     justify-content: space-between;
   }
-  @include section; 
+  @include section;
   .section {
     &__restaurants {
       display: flex;
@@ -49,16 +53,16 @@ figure {
         width: 100%;
       }
     }
-    
-    &__menu:not(h2){
+
+    &__menu:not(h3) {
       display: flex;
       flex-flow: row wrap;
       justify-content: space-between;
-      h2{
+      h2 {
         width: 100%;
       }
-      .column{
-        width: 30%;
+      .column {
+        width: 49%;
         margin: 0;
         display: block;
       }
@@ -68,71 +72,72 @@ figure {
     &__fonctionnement {
       width: 31%;
     }
-    &__gradient{
+    &__gradient {
       width: 25%;
+      &-commande {
+        height: min-content;
+        transform: translate(-50%, 325%);
+      }
     }
   }
 }
 
-
-
 /*LAPTOP+DESKTOP*/
 @media all and (min-width: 1024px) {
   @include section;
-  
-  img{
+
+  img {
     height: 20em;
   }
   div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
   }
-  
+
   .section {
     &__restaurants {
-      
       display: flex;
       flex-flow: row wrap;
       justify-content: space-between;
-      h2{
+      h2 {
         width: 100%;
       }
       a {
         width: 24%;
       }
     }
-    
-    &__menu:not(h2){
-      
-      h2{
+
+    &__menu:not(h2) {
+      h2 {
         width: 100%;
       }
-      h3{
+      h3 {
         width: 50px;
       }
       display: flex;
       flex-flow: row wrap;
       justify-content: space-between;
-      .column{
+      .column {
         width: 32%;
         margin: 0;
         display: block;
       }
-      div{
+      div {
         width: 90%;
       }
-      
     }
   }
   .btn {
     &__fonctionnement {
       width: 31%;
     }
-    &__gradient{
+    &__gradient {
       width: 18%;
-      
+      &-commande {
+        height: min-content;
+        transform: translate(225%);
+      }
     }
   }
 }
