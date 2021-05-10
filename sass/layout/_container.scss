@@ -23,8 +23,11 @@ figure {
   }
 }
 
+
+
 @media all and (max-width: 768px) {
   @include section;
+  @include heart;
   .btn__gradient-commande {
       height: min-content;
       transform: translate(50%);
@@ -43,7 +46,7 @@ figure {
     justify-content: space-between;
   }
   @include section;
-  
+  @include heart;
   .section {
     &__restaurants {
       display: flex;
@@ -88,7 +91,7 @@ figure {
 /*LAPTOP+DESKTOP*/
 @media all and (min-width: 1024px) {
   @include section;
-
+  @include heart;
   img {
     height: 20em;
   }
