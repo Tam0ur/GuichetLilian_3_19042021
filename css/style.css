@@ -23,42 +23,17 @@ div {
     opacity: 1;
   }
 }
+@keyframes heart {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 /*MIXINS*/
-/*@mixin heart {
-  .heart {
-    z-index: auto;
-    right: 1.2%;
-    bottom: 18%;
-    background-color: blue;
-
-    height: 12px;
-    margin: 0 10px;
-    position: absolute;
-
-    transform: rotate(-45deg);
-    width: 12px;
-  }
-
-  .heart:before,
-  .heart:after {
-    content: "";
-    background-color: red;
-    border-radius: 50%;
-    height: 12px;
-    position: absolute;
-    width: 12px;
-  }
-
-  .heart:before {
-    top: -5px;
-    left: 0;
-  }
-
-  .heart:after {
-    left: 5px;
-    top: 0;
-  }
-}*/
 /*EXTENSIONS*/
 /*BASE*/
 * {
@@ -142,12 +117,6 @@ button:hover {
 .fa-heart {
   font-weight: 100;
   float: right;
-}
-
-.heart {
-  display: inline-block;
-  height: 19px;
-  background: linear-gradient(#9356DC, color-secondary);
 }
 
 .fa-arrow-left {
@@ -306,6 +275,47 @@ figure figcaption p {
     margin-top: 25px;
   }
 
+  .heart {
+    rotate: -45deg;
+    opacity: 0;
+    right: 0;
+    bottom: 18%;
+    background-color: #FF79DA;
+    height: 12px;
+    margin: 0 15px;
+    position: absolute;
+    transform: rotate(-45deg);
+    width: 12px;
+  }
+  .heart:hover {
+    animation: heart 0.5s;
+    animation-fill-mode: forwards;
+  }
+  .heart:hover .fa-heart {
+    opacity: 0;
+  }
+
+  .heart:before,
+.heart:after {
+    z-index: 1;
+    content: "";
+    background: linear-gradient(45deg, #FF79DA 30%, #9356DC);
+    border-radius: 50%;
+    height: 12px;
+    position: absolute;
+    width: 12px;
+  }
+
+  .heart:before {
+    top: -5px;
+    left: 0;
+  }
+
+  .heart:after {
+    left: 5px;
+    top: 0;
+  }
+
   .btn__gradient-commande {
     height: min-content;
     transform: translate(50%);
@@ -378,6 +388,47 @@ figure figcaption p {
   }
   .section__menu button {
     margin-top: 25px;
+  }
+
+  .heart {
+    rotate: -45deg;
+    opacity: 0;
+    right: 0;
+    bottom: 18%;
+    background-color: #FF79DA;
+    height: 12px;
+    margin: 0 15px;
+    position: absolute;
+    transform: rotate(-45deg);
+    width: 12px;
+  }
+  .heart:hover {
+    animation: heart 0.5s;
+    animation-fill-mode: forwards;
+  }
+  .heart:hover .fa-heart {
+    opacity: 0;
+  }
+
+  .heart:before,
+.heart:after {
+    z-index: 1;
+    content: "";
+    background: linear-gradient(45deg, #FF79DA 30%, #9356DC);
+    border-radius: 50%;
+    height: 12px;
+    position: absolute;
+    width: 12px;
+  }
+
+  .heart:before {
+    top: -5px;
+    left: 0;
+  }
+
+  .heart:after {
+    left: 5px;
+    top: 0;
   }
 
   .section__restaurants {
@@ -474,6 +525,47 @@ figure figcaption p {
   }
   .section__menu button {
     margin-top: 25px;
+  }
+
+  .heart {
+    rotate: -45deg;
+    opacity: 0;
+    right: 0;
+    bottom: 18%;
+    background-color: #FF79DA;
+    height: 12px;
+    margin: 0 15px;
+    position: absolute;
+    transform: rotate(-45deg);
+    width: 12px;
+  }
+  .heart:hover {
+    animation: heart 0.5s;
+    animation-fill-mode: forwards;
+  }
+  .heart:hover .fa-heart {
+    opacity: 0;
+  }
+
+  .heart:before,
+.heart:after {
+    z-index: 1;
+    content: "";
+    background: linear-gradient(45deg, #FF79DA 30%, #9356DC);
+    border-radius: 50%;
+    height: 12px;
+    position: absolute;
+    width: 12px;
+  }
+
+  .heart:before {
+    top: -5px;
+    left: 0;
+  }
+
+  .heart:after {
+    left: 5px;
+    top: 0;
   }
 
   img {
