@@ -7,6 +7,13 @@
   font-weight: 100;
   float: right;
 }
+
+.heart{
+  display: inline-block;
+  height: 19px;
+  background: linear-gradient($color-primary, color-secondary);
+}
+
 .fa-arrow-left {
   position: absolute;
   font-size: 1rem;
@@ -16,4 +23,16 @@
 
 .nbr__purple {
   @include nbr_purple();
+}
+
+.notif-nouveau {
+  position: absolute;
+  right: 4%;
+  top: 4%;
+  padding: 7px;
+  padding-right: 12px;
+  padding-left: 12px;
+  border-radius: 3px;
+  background-color: $color-tertiary;
+  color: function__darken($color-tertiary, 45%);
 }
