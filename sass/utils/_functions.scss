@@ -1,5 +1,9 @@
 /*FUNCTIONS*/
-@function function__lighten($color){
-    $color : lighten($color, 5%);
+@function function__lighten($color, $intensity){
+    $color : lighten($color, $intensity);
+    @return $color;
+}
+@function function__darken($color, $intensity){
+    $color : darken($color, $intensity);
     @return $color;
 }
