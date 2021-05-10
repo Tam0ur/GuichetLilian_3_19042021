@@ -56,25 +56,36 @@
   }
 }
 
-/*@mixin heart {
+@mixin heart {
   .heart {
-    z-index: auto;
-    right: 1.2%;
+    rotate: -45deg;
+    opacity: 0;
+    right: 0;
+    
     bottom: 18%;
-    background-color: blue;
+    background-color: $color-secondary;
     
     height: 12px;
-    margin: 0 10px;
+    margin: 0 15px;
     position: absolute;
 
     transform: rotate(-45deg);
     width: 12px;
+    &:hover{
+      
+      animation: heart 0.5s;
+      animation-fill-mode : forwards;
+      & .fa-heart{
+        opacity: 0;
+      }
+    }
   }
   
   .heart:before,
   .heart:after {
+    z-index: 1;
     content: "";
-    background-color: red;
+    background: linear-gradient(45deg, $color-secondary 30%, $color-primary);
     border-radius: 50%;
     height: 12px;
     position: absolute;
@@ -87,10 +98,10 @@
   }
   
   .heart:after {
-    left: 5px;
+    left:5px;
     top: 0;
   }
-}*/
+}
 
 @mixin section {
   .section {
