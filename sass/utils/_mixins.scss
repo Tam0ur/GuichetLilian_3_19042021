@@ -139,7 +139,7 @@
       }
       div:not(div:first-child, .column) {
         display: block;
-
+        opacity: 0;
         overflow: hidden;
         padding: 15px;
 
