@@ -32,7 +32,11 @@ figure {
       height: min-content;
       transform: translate(50%);
     }
+    div:hover .coche{
+      animation: animation-coche 2s;
+    }
   }
+
 
 
 @media all and (min-width: 768px) and (max-width: 1023px) {
@@ -72,6 +76,10 @@ figure {
         margin: 0;
         display: block;
       }
+      div:hover .coche{
+          animation: animation-coche 2s;
+        }
+      }
     }
   }
   .btn {
@@ -86,7 +94,6 @@ figure {
       }
     }
   }
-}
 
 /*LAPTOP+DESKTOP*/
 @media all and (min-width: 1024px) {
@@ -131,6 +138,9 @@ figure {
       }
       div {
         width: 90%;
+        &:hover .coche{
+          animation: animation-coche 2s;
+        }
       }
     }
   }
