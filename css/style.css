@@ -4,16 +4,6 @@
 /*VARIABLES*/
 /*FUNCTIONS*/
 /*KEYFRAMES*/
-@-webkit-keyframes slideDown {
-  0% {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0px);
-    opacity: 1;
-  }
-}
 @keyframes slideDown {
   0% {
     transform: translateY(20px);
@@ -24,36 +14,26 @@
     opacity: 1;
   }
 }
-@-webkit-keyframes animation-coche {
-  0% {
-    transform: translateX(0px);
-  }
-  50% {
-    transform: translateX(-90%);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
 @keyframes animation-coche {
   0% {
     transform: translateX(0px);
   }
   50% {
-    transform: translateX(-90%);
+    transform: translateX(-100%);
   }
   100% {
     transform: translateX(0px);
   }
 }
-@-webkit-keyframes heart {
+@keyframes rotate {
   0% {
-    transform: scale(0);
-    opacity: 0;
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
   }
   100% {
-    transform: scale(1);
-    opacity: 1;
+    transform: rotate(360deg);
   }
 }
 @keyframes heart {
@@ -64,21 +44,6 @@
   100% {
     transform: scale(1);
     opacity: 1;
-  }
-}
-@-webkit-keyframes loader {
-  0% {
-    opacity: 1;
-  }
-  95% {
-    opacity: 1;
-  }
-  99% {
-    z-index: 1;
-  }
-  100% {
-    opacity: 0;
-    z-index: -1;
   }
 }
 @keyframes loader {
@@ -96,30 +61,13 @@
     z-index: -1;
   }
 }
-@-webkit-keyframes lds-hourglass {
-  0% {
-    transform: rotate(0);
-    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
-  50% {
-    transform: rotate(900deg);
-    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-  100% {
-    transform: rotate(1800deg);
-  }
-}
 @keyframes lds-hourglass {
   0% {
     transform: rotate(0);
-    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
     animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
   50% {
     transform: rotate(900deg);
-    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
   100% {
@@ -149,7 +97,6 @@ section:not(section:first-child) {
 
 img {
   width: 100%;
-  -o-object-fit: cover;
   object-fit: cover;
   height: 15em;
 }
@@ -170,7 +117,7 @@ button:hover {
   width: 50%;
   color: #fff;
   padding: 12px;
-  background: linear-gradient(#ff79da, #9356dc);
+  background: linear-gradient(#FF79DA, #9356DC);
   border-style: none;
   border-radius: 25px;
   box-shadow: 0px 3px 5px #c2c2c2;
@@ -200,7 +147,7 @@ button:hover {
   background-color: #f5edff;
 }
 .btn__fonctionnement:hover i {
-  color: #9356dc;
+  color: #9356DC;
 }
 
 .prix__plats {
@@ -223,7 +170,7 @@ button:hover {
 .nbr__purple {
   position: relative;
   color: #fff;
-  background-color: #9356dc;
+  background-color: #9356DC;
   padding: 4px;
   padding-left: 8px;
   padding-right: 8px;
@@ -239,45 +186,32 @@ button:hover {
   padding-right: 12px;
   padding-left: 12px;
   border-radius: 3px;
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   color: #217460;
 }
 
 .column div:nth-child(2) {
-  -webkit-animation: slideDown 1s;
   animation: slideDown 1s;
-  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 .column div:nth-child(3) {
-  -webkit-animation: slideDown 1s;
   animation: slideDown 1s;
-  -webkit-animation-delay: 0.15s;
   animation-delay: 0.15s;
-  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 .column div:nth-child(4) {
-  -webkit-animation: slideDown 1s;
   animation: slideDown 1s;
-  -webkit-animation-delay: 0.3s;
   animation-delay: 0.3s;
-  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 .column div:nth-child(5) {
-  -webkit-animation: slideDown 1s;
   animation: slideDown 1s;
-  -webkit-animation-delay: 0.45s;
   animation-delay: 0.45s;
-  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
 
 .loader {
-  -webkit-animation: loader 1s;
   animation: loader 1s;
-  -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   z-index: 1;
   position: fixed;
@@ -310,19 +244,18 @@ button:hover {
   height: 0;
   margin: 8px;
   box-sizing: border-box;
-  border: 32px solid #9356dc;
-  border-color: #9356dc transparent #ff79da transparent;
-  -webkit-animation: lds-hourglass 1.2s infinite;
+  border: 32px solid #9356DC;
+  border-color: #9356DC transparent #FF79DA transparent;
   animation: lds-hourglass 1.2s infinite;
 }
 
 .coche {
   position: fixed;
-  background-color: #99e2d0;
-  right: -15%;
+  background-color: #99E2D0;
+  right: -14%;
   top: 0;
   height: 100%;
-  width: 15%;
+  width: 14%;
 }
 .coche i {
   color: #fff;
@@ -427,7 +360,7 @@ figure figcaption p {
   }
   .section__menu h3 {
     text-transform: uppercase;
-    border-bottom: 3px solid #99e2d0;
+    border-bottom: 3px solid #99E2D0;
     width: 50px;
     font-weight: lighter;
   }
@@ -464,7 +397,7 @@ figure figcaption p {
     opacity: 0;
     right: 0;
     bottom: 18%;
-    background-color: #ff79da;
+    background-color: #FF79DA;
     height: 12px;
     margin: 0 15px;
     position: absolute;
@@ -472,9 +405,7 @@ figure figcaption p {
     width: 12px;
   }
   .heart:hover {
-    -webkit-animation: heart 0.5s;
     animation: heart 0.5s;
-    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
   }
   .heart:hover .fa-heart {
@@ -482,10 +413,10 @@ figure figcaption p {
   }
 
   .heart:before,
-  .heart:after {
+.heart:after {
     z-index: 1;
     content: "";
-    background: linear-gradient(45deg, #ff79da 30%, #9356dc);
+    background: linear-gradient(45deg, #FF79DA 30%, #9356DC);
     border-radius: 50%;
     height: 12px;
     position: absolute;
@@ -503,15 +434,15 @@ figure figcaption p {
   }
 
   .btn__gradient-commande {
-    height: -webkit-min-content;
-    height: -moz-min-content;
     height: min-content;
     transform: translate(50%);
   }
 
   div:hover .coche {
-    -webkit-animation: animation-coche 2s;
     animation: animation-coche 2s;
+  }
+  div:hover .coche i {
+    animation: rotate 2s;
   }
 }
 @media all and (min-width: 768px) and (max-width: 1023px) {
@@ -552,7 +483,7 @@ figure figcaption p {
   }
   .section__menu h3 {
     text-transform: uppercase;
-    border-bottom: 3px solid #99e2d0;
+    border-bottom: 3px solid #99E2D0;
     width: 50px;
     font-weight: lighter;
   }
@@ -589,7 +520,7 @@ figure figcaption p {
     opacity: 0;
     right: 0;
     bottom: 18%;
-    background-color: #ff79da;
+    background-color: #FF79DA;
     height: 12px;
     margin: 0 15px;
     position: absolute;
@@ -597,9 +528,7 @@ figure figcaption p {
     width: 12px;
   }
   .heart:hover {
-    -webkit-animation: heart 0.5s;
     animation: heart 0.5s;
-    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
   }
   .heart:hover .fa-heart {
@@ -607,10 +536,10 @@ figure figcaption p {
   }
 
   .heart:before,
-  .heart:after {
+.heart:after {
     z-index: 1;
     content: "";
-    background: linear-gradient(45deg, #ff79da 30%, #9356dc);
+    background: linear-gradient(45deg, #FF79DA 30%, #9356DC);
     border-radius: 50%;
     height: 12px;
     position: absolute;
@@ -652,23 +581,23 @@ figure figcaption p {
     display: block;
   }
   .section__menu:not(h3) div:hover .coche {
-    -webkit-animation: animation-coche 2s;
     animation: animation-coche 2s;
   }
-}
-.btn__fonctionnement {
-  width: 31%;
-}
-.btn__gradient {
-  width: 25%;
-}
-.btn__gradient-commande {
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-  transform: translate(-50%, 325%);
-}
+  .section__menu:not(h3) div:hover .coche i {
+    animation: rotate 2s;
+  }
 
+  .btn__fonctionnement {
+    width: 31%;
+  }
+  .btn__gradient {
+    width: 25%;
+  }
+  .btn__gradient-commande {
+    height: min-content;
+    transform: translate(-50%, 325%);
+  }
+}
 /*LAPTOP+DESKTOP*/
 @media all and (min-width: 1024px) {
   .section__intro {
@@ -698,7 +627,7 @@ figure figcaption p {
   }
   .section__menu h3 {
     text-transform: uppercase;
-    border-bottom: 3px solid #99e2d0;
+    border-bottom: 3px solid #99E2D0;
     width: 50px;
     font-weight: lighter;
   }
@@ -735,7 +664,7 @@ figure figcaption p {
     opacity: 0;
     right: 0;
     bottom: 18%;
-    background-color: #ff79da;
+    background-color: #FF79DA;
     height: 12px;
     margin: 0 15px;
     position: absolute;
@@ -743,9 +672,7 @@ figure figcaption p {
     width: 12px;
   }
   .heart:hover {
-    -webkit-animation: heart 0.5s;
     animation: heart 0.5s;
-    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
   }
   .heart:hover .fa-heart {
@@ -753,10 +680,10 @@ figure figcaption p {
   }
 
   .heart:before,
-  .heart:after {
+.heart:after {
     z-index: 1;
     content: "";
-    background: linear-gradient(45deg, #ff79da 30%, #9356dc);
+    background: linear-gradient(45deg, #FF79DA 30%, #9356DC);
     border-radius: 50%;
     height: 12px;
     position: absolute;
@@ -814,8 +741,10 @@ figure figcaption p {
     width: 90%;
   }
   .section__menu:not(h2) div:hover .coche {
-    -webkit-animation: animation-coche 2s;
     animation: animation-coche 2s;
+  }
+  .section__menu:not(h2) div:hover .coche i {
+    animation: rotate 2s;
   }
 
   .btn__fonctionnement {
@@ -825,8 +754,6 @@ figure figcaption p {
     width: 18%;
   }
   .btn__gradient-commande {
-    height: -webkit-min-content;
-    height: -moz-min-content;
     height: min-content;
     transform: translate(225%);
   }
@@ -836,3 +763,5 @@ figure figcaption p {
 /*ABOUT*/
 /*PROJECT*/
 /*TESTS*/
+
+/*# sourceMappingURL=style.css.map */
