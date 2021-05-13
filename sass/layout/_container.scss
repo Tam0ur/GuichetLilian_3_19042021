@@ -34,6 +34,9 @@ figure {
     }
     div:hover .coche{
       animation: animation-coche 2s;
+      i {
+        animation: rotate 2s;
+      }
     }
   }
 
@@ -78,22 +81,26 @@ figure {
       }
       div:hover .coche{
           animation: animation-coche 2s;
+          i {
+            animation: rotate 2s;
+          }
+        }
+      }
+    }
+    .btn {
+      &__fonctionnement {
+        width: 31%;
+      }
+      &__gradient {
+        width: 25%;
+        &-commande {
+          height: min-content;
+          transform: translate(-50%, 325%);
         }
       }
     }
   }
-  .btn {
-    &__fonctionnement {
-      width: 31%;
-    }
-    &__gradient {
-      width: 25%;
-      &-commande {
-        height: min-content;
-        transform: translate(-50%, 325%);
-      }
-    }
-  }
+  
 
 /*LAPTOP+DESKTOP*/
 @media all and (min-width: 1024px) {
@@ -140,6 +147,9 @@ figure {
         width: 90%;
         &:hover .coche{
           animation: animation-coche 2s;
+          i {
+            animation: rotate 2s;
+          }
         }
       }
     }
