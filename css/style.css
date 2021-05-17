@@ -18,11 +18,8 @@
   0% {
     transform: translateX(0px);
   }
-  50% {
-    transform: translateX(-100%);
-  }
   100% {
-    transform: translateX(0px);
+    transform: translateX(-100%);
   }
 }
 @keyframes rotate {
@@ -95,6 +92,12 @@ section:not(section:first-child) {
   padding: 15px;
 }
 
+p, h4 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 img {
   width: 100%;
   object-fit: cover;
@@ -151,7 +154,8 @@ button:hover {
 }
 
 .prix__plats {
-  float: right;
+  position: fixed;
+  right: 10px;
   font-weight: bold;
 }
 
@@ -217,8 +221,8 @@ button:hover {
   position: fixed;
   width: 100%;
   height: 100%;
-  margin-top: -2%;
-  padding-bottom: 2%;
+  margin-top: -10%;
+  padding-bottom: 10%;
   background-color: #e5c5f8;
 }
 .loader * {
@@ -376,7 +380,8 @@ figure figcaption p {
     margin-bottom: 10px;
   }
   .section__menu div:not(div:first-child, .column) * {
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
   }
   .section__menu h2 {
     font-family: "Shrikhand", cursive;
@@ -392,11 +397,29 @@ figure figcaption p {
     margin-top: 25px;
   }
 
+  h2 .heart {
+    opacity: 0;
+    top: 4%;
+    height: 15px;
+    margin-right: 22px;
+  }
+}
+@media all and (max-width: 768px) and (min-width: 768px) and (max-width: 1023px) {
+  h2 .heart {
+    top: 6%;
+  }
+}
+@media all and (max-width: 768px) and (min-width: 1024px) {
+  h2 .heart {
+    top: 8.5%;
+  }
+}
+@media all and (max-width: 768px) {
   .heart {
     rotate: -45deg;
     opacity: 0;
     right: 0;
-    bottom: 18%;
+    top: 77%;
     background-color: #FF79DA;
     height: 12px;
     margin: 0 15px;
@@ -406,12 +429,25 @@ figure figcaption p {
   }
   .heart:hover {
     animation: heart 0.5s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: both;
   }
   .heart:hover .fa-heart {
     opacity: 0;
   }
-
+}
+@media all and (max-width: 768px) {
+  h2 .heart:before {
+    height: 15px;
+    width: 15px;
+  }
+}
+@media all and (max-width: 768px) {
+  h2 .heart:after {
+    height: 15px;
+    width: 15px;
+  }
+}
+@media all and (max-width: 768px) {
   .heart:before,
 .heart:after {
     z-index: 1;
@@ -422,27 +458,47 @@ figure figcaption p {
     position: absolute;
     width: 12px;
   }
-
+}
+@media all and (max-width: 768px) {
+  h2 .heart:before {
+    top: -7px;
+  }
+}
+@media all and (max-width: 768px) {
+  h2 .heart::after {
+    left: 7px;
+  }
+}
+@media all and (max-width: 768px) {
   .heart:before {
     top: -5px;
     left: 0;
   }
-
+}
+@media all and (max-width: 768px) {
   .heart:after {
     left: 5px;
     top: 0;
   }
-
+}
+@media all and (max-width: 768px) {
   .btn__gradient-commande {
     height: min-content;
     transform: translate(50%);
   }
-
+}
+@media all and (max-width: 768px) {
   div:hover .coche {
-    animation: animation-coche 2s;
+    animation: animation-coche 1s;
+    animation-fill-mode: both;
   }
   div:hover .coche i {
-    animation: rotate 2s;
+    animation: rotate 1s;
+  }
+}
+@media all and (max-width: 768px) {
+  .section__menu h2 {
+    font-weight: lighter;
   }
 }
 @media all and (min-width: 768px) and (max-width: 1023px) {
@@ -499,7 +555,8 @@ figure figcaption p {
     margin-bottom: 10px;
   }
   .section__menu div:not(div:first-child, .column) * {
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
   }
   .section__menu h2 {
     font-family: "Shrikhand", cursive;
@@ -515,11 +572,29 @@ figure figcaption p {
     margin-top: 25px;
   }
 
+  h2 .heart {
+    opacity: 0;
+    top: 4%;
+    height: 15px;
+    margin-right: 22px;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1023px) and (min-width: 768px) and (max-width: 1023px) {
+  h2 .heart {
+    top: 6%;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1023px) and (min-width: 1024px) {
+  h2 .heart {
+    top: 8.5%;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1023px) {
   .heart {
     rotate: -45deg;
     opacity: 0;
     right: 0;
-    bottom: 18%;
+    top: 77%;
     background-color: #FF79DA;
     height: 12px;
     margin: 0 15px;
@@ -529,12 +604,25 @@ figure figcaption p {
   }
   .heart:hover {
     animation: heart 0.5s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: both;
   }
   .heart:hover .fa-heart {
     opacity: 0;
   }
-
+}
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  h2 .heart:before {
+    height: 15px;
+    width: 15px;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  h2 .heart:after {
+    height: 15px;
+    width: 15px;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1023px) {
   .heart:before,
 .heart:after {
     z-index: 1;
@@ -545,17 +633,30 @@ figure figcaption p {
     position: absolute;
     width: 12px;
   }
-
+}
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  h2 .heart:before {
+    top: -7px;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  h2 .heart::after {
+    left: 7px;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1023px) {
   .heart:before {
     top: -5px;
     left: 0;
   }
-
+}
+@media all and (min-width: 768px) and (max-width: 1023px) {
   .heart:after {
     left: 5px;
     top: 0;
   }
-
+}
+@media all and (min-width: 768px) and (max-width: 1023px) {
   .section__restaurants {
     display: flex;
     flex-flow: row wrap;
@@ -574,6 +675,7 @@ figure figcaption p {
   }
   .section__menu:not(h3) h2 {
     width: 100%;
+    font-weight: lighter;
   }
   .section__menu:not(h3) .column {
     width: 49%;
@@ -581,12 +683,14 @@ figure figcaption p {
     display: block;
   }
   .section__menu:not(h3) div:hover .coche {
-    animation: animation-coche 2s;
+    animation: animation-coche 1s;
+    animation-fill-mode: both;
   }
   .section__menu:not(h3) div:hover .coche i {
-    animation: rotate 2s;
+    animation: rotate 1s;
   }
-
+}
+@media all and (min-width: 768px) and (max-width: 1023px) {
   .btn__fonctionnement {
     width: 31%;
   }
@@ -643,7 +747,8 @@ figure figcaption p {
     margin-bottom: 10px;
   }
   .section__menu div:not(div:first-child, .column) * {
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
   }
   .section__menu h2 {
     font-family: "Shrikhand", cursive;
@@ -659,11 +764,29 @@ figure figcaption p {
     margin-top: 25px;
   }
 
+  h2 .heart {
+    opacity: 0;
+    top: 4%;
+    height: 15px;
+    margin-right: 22px;
+  }
+}
+@media all and (min-width: 1024px) and (min-width: 768px) and (max-width: 1023px) {
+  h2 .heart {
+    top: 6%;
+  }
+}
+@media all and (min-width: 1024px) and (min-width: 1024px) {
+  h2 .heart {
+    top: 8.5%;
+  }
+}
+@media all and (min-width: 1024px) {
   .heart {
     rotate: -45deg;
     opacity: 0;
     right: 0;
-    bottom: 18%;
+    top: 77%;
     background-color: #FF79DA;
     height: 12px;
     margin: 0 15px;
@@ -673,12 +796,25 @@ figure figcaption p {
   }
   .heart:hover {
     animation: heart 0.5s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: both;
   }
   .heart:hover .fa-heart {
     opacity: 0;
   }
-
+}
+@media all and (min-width: 1024px) {
+  h2 .heart:before {
+    height: 15px;
+    width: 15px;
+  }
+}
+@media all and (min-width: 1024px) {
+  h2 .heart:after {
+    height: 15px;
+    width: 15px;
+  }
+}
+@media all and (min-width: 1024px) {
   .heart:before,
 .heart:after {
     z-index: 1;
@@ -689,27 +825,42 @@ figure figcaption p {
     position: absolute;
     width: 12px;
   }
-
+}
+@media all and (min-width: 1024px) {
+  h2 .heart:before {
+    top: -7px;
+  }
+}
+@media all and (min-width: 1024px) {
+  h2 .heart::after {
+    left: 7px;
+  }
+}
+@media all and (min-width: 1024px) {
   .heart:before {
     top: -5px;
     left: 0;
   }
-
+}
+@media all and (min-width: 1024px) {
   .heart:after {
     left: 5px;
     top: 0;
   }
-
+}
+@media all and (min-width: 1024px) {
   img {
     height: 20em;
   }
-
+}
+@media all and (min-width: 1024px) {
   div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
-
+}
+@media all and (min-width: 1024px) {
   .section__restaurants {
     display: flex;
     flex-flow: row wrap;
@@ -728,6 +879,7 @@ figure figcaption p {
   }
   .section__menu:not(h2) h2 {
     width: 100%;
+    font-weight: lighter;
   }
   .section__menu:not(h2) h3 {
     width: 50px;
@@ -741,12 +893,14 @@ figure figcaption p {
     width: 90%;
   }
   .section__menu:not(h2) div:hover .coche {
-    animation: animation-coche 2s;
+    animation: animation-coche 1s;
+    animation-fill-mode: both;
   }
   .section__menu:not(h2) div:hover .coche i {
-    animation: rotate 2s;
+    animation: rotate 1s;
   }
-
+}
+@media all and (min-width: 1024px) {
   .btn__fonctionnement {
     width: 31%;
   }
