@@ -57,30 +57,50 @@
 }
 
 @mixin heart {
+  h2 .heart {
+    opacity: 0;
+    top: 4%;
+    height: 15px;
+    margin-right: 22px;
+    @media all and (min-width: 768px) and (max-width: 1023px) {
+      top: 6%;
+    }
+    @media all and (min-width: 1024px) {
+      top: 8.5%;
+    }
+  }
+
   .heart {
     rotate: -45deg;
     opacity: 0;
     right: 0;
-    
-    bottom: 18%;
+
+    top: 77%;
     background-color: $color-secondary;
-    
+
     height: 12px;
     margin: 0 15px;
     position: absolute;
 
     transform: rotate(-45deg);
     width: 12px;
-    &:hover{
-      
+
+    &:hover {
       animation: heart 0.5s;
-      animation-fill-mode : forwards;
-      & .fa-heart{
+      animation-fill-mode: both;
+      & .fa-heart {
         opacity: 0;
       }
     }
   }
-  
+  h2 .heart:before {
+    height: 15px;
+    width: 15px;
+  }
+  h2 .heart:after {
+    height: 15px;
+    width: 15px;
+  }
   .heart:before,
   .heart:after {
     z-index: 1;
@@ -91,14 +111,20 @@
     position: absolute;
     width: 12px;
   }
-  
+
+  h2 .heart:before {
+    top: -7px;
+  }
+  h2 .heart::after {
+    left: 7px;
+  }
   .heart:before {
     top: -5px;
     left: 0;
   }
-  
+
   .heart:after {
-    left:5px;
+    left: 5px;
     top: 0;
   }
 }
@@ -149,7 +175,8 @@
         text-overflow: ellipsis;
         margin-bottom: 10px;
         * {
-          margin: 0;
+          margin-top: 0;
+          margin-bottom: 0;
         }
       }
       h2 {
