@@ -28,16 +28,22 @@ figure {
 @media all and (max-width: 768px) {
   @include section;
   @include heart;
+  
   .btn__gradient-commande {
       height: min-content;
       transform: translate(50%);
     }
     div:hover .coche{
-      animation: animation-coche 2s;
+      animation: animation-coche 1s;
+      animation-fill-mode: both;
       i {
-        animation: rotate 2s;
+        animation: rotate 1s;
       }
     }
+    .section__menu h2{
+      font-weight: lighter;
+    }
+    
   }
 
 
@@ -73,6 +79,7 @@ figure {
       justify-content: space-between;
       h2 {
         width: 100%;
+        font-weight: lighter;
       }
       .column {
         width: 49%;
@@ -80,11 +87,12 @@ figure {
         display: block;
       }
       div:hover .coche{
-          animation: animation-coche 2s;
-          i {
-            animation: rotate 2s;
-          }
+        animation: animation-coche 1s;
+        animation-fill-mode: both;
+        i {
+          animation: rotate 1s;
         }
+      }
       }
     }
     .btn {
@@ -131,6 +139,7 @@ figure {
     &__menu:not(h2) {
       h2 {
         width: 100%;
+        font-weight: lighter;
       }
       h3 {
         width: 50px;
@@ -146,9 +155,10 @@ figure {
       div {
         width: 90%;
         &:hover .coche{
-          animation: animation-coche 2s;
+          animation: animation-coche 1s;
+          animation-fill-mode: both;
           i {
-            animation: rotate 2s;
+            animation: rotate 1s;
           }
         }
       }
