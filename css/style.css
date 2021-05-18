@@ -22,7 +22,7 @@
     transform: translateX(-100%);
   }
 }
-@keyframes rotate {
+@keyframes rotate_coche {
   0% {
     transform: rotate(0deg);
   }
@@ -88,7 +88,7 @@ main {
   background-color: #f6f6f6;
 }
 
-section:not(section:first-child) {
+section:not(.section__intro) {
   padding: 15px;
 }
 
@@ -309,7 +309,7 @@ footer * {
 }
 
 /*NAV*/
-a:not(footer a) {
+a:not(.footer__a) {
   color: #000;
   text-decoration: none;
 }
@@ -342,7 +342,7 @@ figure figcaption p {
     text-align: center;
     padding-bottom: 30px;
   }
-  .section__intro p:not(p:nth-child(3)) {
+  .section__intro .intro__lieu {
     background-color: #eaeaea;
     padding: 15px;
     margin: 0;
@@ -368,7 +368,7 @@ figure figcaption p {
     width: 50px;
     font-weight: lighter;
   }
-  .section__menu div:not(div:first-child, .column) {
+  .section__menu .margin__menu {
     display: block;
     opacity: 0;
     overflow: hidden;
@@ -379,11 +379,11 @@ figure figcaption p {
     text-overflow: ellipsis;
     margin-bottom: 10px;
   }
-  .section__menu div:not(div:first-child, .column) * {
+  .section__menu .margin__menu * {
     margin-top: 0;
     margin-bottom: 0;
   }
-  .section__menu h2 {
+  .Shrikhand{
     font-family: "Shrikhand", cursive;
   }
   .section__menu h4 {
@@ -398,7 +398,6 @@ figure figcaption p {
   }
 
   h2 .heart {
-    opacity: 0;
     top: 4%;
     height: 15px;
     margin-right: 22px;
@@ -416,7 +415,6 @@ figure figcaption p {
 }
 @media all and (max-width: 768px) {
   .heart {
-    rotate: -45deg;
     opacity: 0;
     right: 0;
     top: 77%;
@@ -424,15 +422,16 @@ figure figcaption p {
     height: 12px;
     margin: 0 15px;
     position: absolute;
-    transform: rotate(-45deg);
     width: 12px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
   }
   .heart:hover {
     animation: heart 0.5s;
-    animation-fill-mode: both;
-  }
-  .heart:hover .fa-heart {
-    opacity: 0;
+    animation-fill-mode: forwards;
   }
 }
 @media all and (max-width: 768px) {
@@ -493,7 +492,7 @@ figure figcaption p {
     animation-fill-mode: both;
   }
   div:hover .coche i {
-    animation: rotate 1s;
+    animation: rotate_coche 2s;
   }
 }
 @media all and (max-width: 768px) {
@@ -506,18 +505,18 @@ figure figcaption p {
     height: 15em;
   }
 
-  div:not(div:first-child, .column) {
+  .margin__menu {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
 
   .section__intro {
-    background-color: #f6f6f6;
     text-align: center;
+    background-color: #f6f6f6;
     padding-bottom: 30px;
   }
-  .section__intro p:not(p:nth-child(3)) {
+  .section__intro .intro__lieu {
     background-color: #eaeaea;
     padding: 15px;
     margin: 0;
@@ -543,7 +542,7 @@ figure figcaption p {
     width: 50px;
     font-weight: lighter;
   }
-  .section__menu div:not(div:first-child, .column) {
+  .margin__menu {
     display: block;
     opacity: 0;
     overflow: hidden;
@@ -554,11 +553,11 @@ figure figcaption p {
     text-overflow: ellipsis;
     margin-bottom: 10px;
   }
-  .section__menu div:not(div:first-child, .column) * {
+  .margin__menu * {
     margin-top: 0;
     margin-bottom: 0;
   }
-  .section__menu h2 {
+  .Shrikhand {
     font-family: "Shrikhand", cursive;
   }
   .section__menu h4 {
@@ -573,7 +572,6 @@ figure figcaption p {
   }
 
   h2 .heart {
-    opacity: 0;
     top: 4%;
     height: 15px;
     margin-right: 22px;
@@ -591,7 +589,6 @@ figure figcaption p {
 }
 @media all and (min-width: 768px) and (max-width: 1023px) {
   .heart {
-    rotate: -45deg;
     opacity: 0;
     right: 0;
     top: 77%;
@@ -599,15 +596,16 @@ figure figcaption p {
     height: 12px;
     margin: 0 15px;
     position: absolute;
-    transform: rotate(-45deg);
     width: 12px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
   }
   .heart:hover {
     animation: heart 0.5s;
-    animation-fill-mode: both;
-  }
-  .heart:hover .fa-heart {
-    opacity: 0;
+    animation-fill-mode: forwards;
   }
 }
 @media all and (min-width: 768px) and (max-width: 1023px) {
@@ -687,7 +685,7 @@ figure figcaption p {
     animation-fill-mode: both;
   }
   .section__menu:not(h3) div:hover .coche i {
-    animation: rotate 1s;
+    animation: rotate_coche 2s;
   }
 }
 @media all and (min-width: 768px) and (max-width: 1023px) {
@@ -709,7 +707,7 @@ figure figcaption p {
     text-align: center;
     padding-bottom: 30px;
   }
-  .section__intro p:not(p:nth-child(3)) {
+  .section__intro .intro__lieu {
     background-color: #eaeaea;
     padding: 15px;
     margin: 0;
@@ -735,7 +733,7 @@ figure figcaption p {
     width: 50px;
     font-weight: lighter;
   }
-  .section__menu div:not(div:first-child, .column) {
+  .margin__menu {
     display: block;
     opacity: 0;
     overflow: hidden;
@@ -746,11 +744,11 @@ figure figcaption p {
     text-overflow: ellipsis;
     margin-bottom: 10px;
   }
-  .section__menu div:not(div:first-child, .column) * {
+  .margin__menu * {
     margin-top: 0;
     margin-bottom: 0;
   }
-  .section__menu h2 {
+  .Shrikhand {
     font-family: "Shrikhand", cursive;
   }
   .section__menu h4 {
@@ -765,7 +763,6 @@ figure figcaption p {
   }
 
   h2 .heart {
-    opacity: 0;
     top: 4%;
     height: 15px;
     margin-right: 22px;
@@ -783,7 +780,6 @@ figure figcaption p {
 }
 @media all and (min-width: 1024px) {
   .heart {
-    rotate: -45deg;
     opacity: 0;
     right: 0;
     top: 77%;
@@ -791,15 +787,16 @@ figure figcaption p {
     height: 12px;
     margin: 0 15px;
     position: absolute;
-    transform: rotate(-45deg);
     width: 12px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
   }
   .heart:hover {
     animation: heart 0.5s;
-    animation-fill-mode: both;
-  }
-  .heart:hover .fa-heart {
-    opacity: 0;
+    animation-fill-mode: forwards;
   }
 }
 @media all and (min-width: 1024px) {
@@ -897,7 +894,7 @@ figure figcaption p {
     animation-fill-mode: both;
   }
   .section__menu:not(h2) div:hover .coche i {
-    animation: rotate 1s;
+    animation: rotate_coche 2s;
   }
 }
 @media all and (min-width: 1024px) {
