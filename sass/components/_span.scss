@@ -2,7 +2,7 @@
   position: fixed;
   right: 10px;
   font-weight: bold;
- 
+ bottom: 15px;
 }
 
 .fa-heart {
@@ -36,7 +36,7 @@
 
 
 .column {
-  div{
+  div:not(.prix__plats){
     &:nth-child(2) {
       animation: slideDown 1s;
       animation-fill-mode: forwards;
@@ -99,17 +99,17 @@
 }
 
 .coche{
+  width: 0px;
   position: fixed;
   background-color: $color-tertiary;
-  right: -14%;
   top: 0;
   height: 100%;
-  width: 14%;
+  right: 0;
   i{
     color: #fff;
     position: relative;
-    top: 31%;
-    left: 25%;
+    top: 32%;
+    left: 32%;
     font-size: 25px;
   }
 }
