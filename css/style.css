@@ -14,12 +14,12 @@
     opacity: 1;
   }
 }
-@keyframes animation-coche {
+@keyframes animation_coche {
   0% {
-    transform: translateX(0px);
+    width: 0px;
   }
   100% {
-    transform: translateX(-100%);
+    width: 70px;
   }
 }
 @keyframes rotate_coche {
@@ -88,7 +88,7 @@ main {
   background-color: #f6f6f6;
 }
 
-section:not(.section__intro) {
+section:not(section:first-child) {
   padding: 15px;
 }
 
@@ -157,6 +157,7 @@ button:hover {
   position: fixed;
   right: 10px;
   font-weight: bold;
+  bottom: 15px;
 }
 
 .fa-heart {
@@ -194,21 +195,21 @@ button:hover {
   color: #217460;
 }
 
-.column div:nth-child(2) {
+.column div:not(.prix__plats):nth-child(2) {
   animation: slideDown 1s;
   animation-fill-mode: forwards;
 }
-.column div:nth-child(3) {
+.column div:not(.prix__plats):nth-child(3) {
   animation: slideDown 1s;
   animation-delay: 0.15s;
   animation-fill-mode: forwards;
 }
-.column div:nth-child(4) {
+.column div:not(.prix__plats):nth-child(4) {
   animation: slideDown 1s;
   animation-delay: 0.3s;
   animation-fill-mode: forwards;
 }
-.column div:nth-child(5) {
+.column div:not(.prix__plats):nth-child(5) {
   animation: slideDown 1s;
   animation-delay: 0.45s;
   animation-fill-mode: forwards;
@@ -254,18 +255,18 @@ button:hover {
 }
 
 .coche {
+  width: 0px;
   position: fixed;
   background-color: #99E2D0;
-  right: -14%;
   top: 0;
   height: 100%;
-  width: 14%;
+  right: 0;
 }
 .coche i {
   color: #fff;
   position: relative;
-  top: 31%;
-  left: 25%;
+  top: 32%;
+  left: 32%;
   font-size: 25px;
 }
 
@@ -309,7 +310,7 @@ footer * {
 }
 
 /*NAV*/
-a:not(.footer__a) {
+a:not(footer a) {
   color: #000;
   text-decoration: none;
 }
@@ -342,7 +343,7 @@ figure figcaption p {
     text-align: center;
     padding-bottom: 30px;
   }
-  .section__intro .intro__lieu {
+  .section__intro p:not(p:nth-child(3)) {
     background-color: #eaeaea;
     padding: 15px;
     margin: 0;
@@ -373,6 +374,7 @@ figure figcaption p {
     opacity: 0;
     overflow: hidden;
     padding: 15px;
+    padding-right: 38px;
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0px 2px 5px #d1d1d1;
@@ -383,7 +385,7 @@ figure figcaption p {
     margin-top: 0;
     margin-bottom: 0;
   }
-  .Shrikhand{
+  .section__menu h2 {
     font-family: "Shrikhand", cursive;
   }
   .section__menu h4 {
@@ -398,104 +400,35 @@ figure figcaption p {
   }
 
   h2 .heart {
-    top: 4%;
-    height: 15px;
-    margin-right: 22px;
+    right: 15px;
   }
-}
-@media all and (max-width: 768px) and (min-width: 768px) and (max-width: 1023px) {
-  h2 .heart {
-    top: 6%;
-  }
-}
-@media all and (max-width: 768px) and (min-width: 1024px) {
-  h2 .heart {
-    top: 8.5%;
-  }
-}
-@media all and (max-width: 768px) {
+
   .heart {
-    opacity: 0;
-    right: 0;
-    top: 77%;
-    background-color: #FF79DA;
-    height: 12px;
-    margin: 0 15px;
+    background: linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     position: absolute;
-    width: 12px;
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
+    right: 11.5px;
+    opacity: 0;
   }
   .heart:hover {
-    animation: heart 0.5s;
+    animation: heart 1s;
     animation-fill-mode: forwards;
   }
-}
-@media all and (max-width: 768px) {
-  h2 .heart:before {
-    height: 15px;
-    width: 15px;
-  }
-}
-@media all and (max-width: 768px) {
-  h2 .heart:after {
-    height: 15px;
-    width: 15px;
-  }
-}
-@media all and (max-width: 768px) {
-  .heart:before,
-.heart:after {
-    z-index: 1;
-    content: "";
-    background: linear-gradient(45deg, #FF79DA 30%, #9356DC);
-    border-radius: 50%;
-    height: 12px;
-    position: absolute;
-    width: 12px;
-  }
-}
-@media all and (max-width: 768px) {
-  h2 .heart:before {
-    top: -7px;
-  }
-}
-@media all and (max-width: 768px) {
-  h2 .heart::after {
-    left: 7px;
-  }
-}
-@media all and (max-width: 768px) {
-  .heart:before {
-    top: -5px;
-    left: 0;
-  }
-}
-@media all and (max-width: 768px) {
-  .heart:after {
-    left: 5px;
-    top: 0;
-  }
-}
-@media all and (max-width: 768px) {
+
   .btn__gradient-commande {
     height: min-content;
     transform: translate(50%);
   }
-}
-@media all and (max-width: 768px) {
-  div:hover .coche {
-    animation: animation-coche 1s;
+
+  div:not(.column):hover .coche {
+    animation: animation_coche 1s;
     animation-fill-mode: both;
   }
-  div:hover .coche i {
+  div:not(.column):hover .coche i {
     animation: rotate_coche 2s;
   }
-}
-@media all and (max-width: 768px) {
+
   .section__menu h2 {
     font-weight: lighter;
   }
@@ -505,18 +438,18 @@ figure figcaption p {
     height: 15em;
   }
 
-  .margin__menu {
+  div:not(div:first-child, .column) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
 
   .section__intro {
-    text-align: center;
     background-color: #f6f6f6;
+    text-align: center;
     padding-bottom: 30px;
   }
-  .section__intro .intro__lieu {
+  .section__intro p:not(p:nth-child(3)) {
     background-color: #eaeaea;
     padding: 15px;
     margin: 0;
@@ -542,22 +475,23 @@ figure figcaption p {
     width: 50px;
     font-weight: lighter;
   }
-  .margin__menu {
+  .section__menu .margin__menu {
     display: block;
     opacity: 0;
     overflow: hidden;
     padding: 15px;
+    padding-right: 38px;
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0px 2px 5px #d1d1d1;
     text-overflow: ellipsis;
     margin-bottom: 10px;
   }
-  .margin__menu * {
+  .section__menu .margin__menu * {
     margin-top: 0;
     margin-bottom: 0;
   }
-  .Shrikhand {
+  .section__menu h2 {
     font-family: "Shrikhand", cursive;
   }
   .section__menu h4 {
@@ -572,89 +506,22 @@ figure figcaption p {
   }
 
   h2 .heart {
-    top: 4%;
-    height: 15px;
-    margin-right: 22px;
+    right: 15px;
   }
-}
-@media all and (min-width: 768px) and (max-width: 1023px) and (min-width: 768px) and (max-width: 1023px) {
-  h2 .heart {
-    top: 6%;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 1023px) and (min-width: 1024px) {
-  h2 .heart {
-    top: 8.5%;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 1023px) {
+
   .heart {
-    opacity: 0;
-    right: 0;
-    top: 77%;
-    background-color: #FF79DA;
-    height: 12px;
-    margin: 0 15px;
+    background: linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     position: absolute;
-    width: 12px;
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
+    right: 11.5px;
+    opacity: 0;
   }
   .heart:hover {
-    animation: heart 0.5s;
+    animation: heart 1s;
     animation-fill-mode: forwards;
   }
-}
-@media all and (min-width: 768px) and (max-width: 1023px) {
-  h2 .heart:before {
-    height: 15px;
-    width: 15px;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 1023px) {
-  h2 .heart:after {
-    height: 15px;
-    width: 15px;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 1023px) {
-  .heart:before,
-.heart:after {
-    z-index: 1;
-    content: "";
-    background: linear-gradient(45deg, #FF79DA 30%, #9356DC);
-    border-radius: 50%;
-    height: 12px;
-    position: absolute;
-    width: 12px;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 1023px) {
-  h2 .heart:before {
-    top: -7px;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 1023px) {
-  h2 .heart::after {
-    left: 7px;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 1023px) {
-  .heart:before {
-    top: -5px;
-    left: 0;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 1023px) {
-  .heart:after {
-    left: 5px;
-    top: 0;
-  }
-}
-@media all and (min-width: 768px) and (max-width: 1023px) {
+
   .section__restaurants {
     display: flex;
     flex-flow: row wrap;
@@ -680,15 +547,14 @@ figure figcaption p {
     margin: 0;
     display: block;
   }
-  .section__menu:not(h3) div:hover .coche {
-    animation: animation-coche 1s;
+  .section__menu:not(h3) div:not(.column):hover .coche {
+    animation: animation_coche 1s;
     animation-fill-mode: both;
   }
-  .section__menu:not(h3) div:hover .coche i {
+  .section__menu:not(h3) div:not(.column):hover .coche i {
     animation: rotate_coche 2s;
   }
-}
-@media all and (min-width: 768px) and (max-width: 1023px) {
+
   .btn__fonctionnement {
     width: 31%;
   }
@@ -707,7 +573,7 @@ figure figcaption p {
     text-align: center;
     padding-bottom: 30px;
   }
-  .section__intro .intro__lieu {
+  .section__intro p:not(p:nth-child(3)) {
     background-color: #eaeaea;
     padding: 15px;
     margin: 0;
@@ -733,22 +599,23 @@ figure figcaption p {
     width: 50px;
     font-weight: lighter;
   }
-  .margin__menu {
+  .section__menu .margin__menu {
     display: block;
     opacity: 0;
     overflow: hidden;
     padding: 15px;
+    padding-right: 38px;
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0px 2px 5px #d1d1d1;
     text-overflow: ellipsis;
     margin-bottom: 10px;
   }
-  .margin__menu * {
+  .section__menu .margin__menu * {
     margin-top: 0;
     margin-bottom: 0;
   }
-  .Shrikhand {
+  .section__menu h2 {
     font-family: "Shrikhand", cursive;
   }
   .section__menu h4 {
@@ -763,101 +630,26 @@ figure figcaption p {
   }
 
   h2 .heart {
-    top: 4%;
-    height: 15px;
-    margin-right: 22px;
+    right: 15px;
   }
-}
-@media all and (min-width: 1024px) and (min-width: 768px) and (max-width: 1023px) {
-  h2 .heart {
-    top: 6%;
-  }
-}
-@media all and (min-width: 1024px) and (min-width: 1024px) {
-  h2 .heart {
-    top: 8.5%;
-  }
-}
-@media all and (min-width: 1024px) {
+
   .heart {
-    opacity: 0;
-    right: 0;
-    top: 77%;
-    background-color: #FF79DA;
-    height: 12px;
-    margin: 0 15px;
+    background: linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     position: absolute;
-    width: 12px;
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
+    right: 11.5px;
+    opacity: 0;
   }
   .heart:hover {
-    animation: heart 0.5s;
+    animation: heart 1s;
     animation-fill-mode: forwards;
   }
-}
-@media all and (min-width: 1024px) {
-  h2 .heart:before {
-    height: 15px;
-    width: 15px;
-  }
-}
-@media all and (min-width: 1024px) {
-  h2 .heart:after {
-    height: 15px;
-    width: 15px;
-  }
-}
-@media all and (min-width: 1024px) {
-  .heart:before,
-.heart:after {
-    z-index: 1;
-    content: "";
-    background: linear-gradient(45deg, #FF79DA 30%, #9356DC);
-    border-radius: 50%;
-    height: 12px;
-    position: absolute;
-    width: 12px;
-  }
-}
-@media all and (min-width: 1024px) {
-  h2 .heart:before {
-    top: -7px;
-  }
-}
-@media all and (min-width: 1024px) {
-  h2 .heart::after {
-    left: 7px;
-  }
-}
-@media all and (min-width: 1024px) {
-  .heart:before {
-    top: -5px;
-    left: 0;
-  }
-}
-@media all and (min-width: 1024px) {
-  .heart:after {
-    left: 5px;
-    top: 0;
-  }
-}
-@media all and (min-width: 1024px) {
+
   img {
     height: 20em;
   }
-}
-@media all and (min-width: 1024px) {
-  div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-@media all and (min-width: 1024px) {
+
   .section__restaurants {
     display: flex;
     flex-flow: row wrap;
@@ -869,35 +661,31 @@ figure figcaption p {
   .section__restaurants a {
     width: 24%;
   }
-  .section__menu:not(h2) {
+  .section__menu {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
   }
-  .section__menu:not(h2) h2 {
+  .section__menu h2 {
     width: 100%;
     font-weight: lighter;
   }
-  .section__menu:not(h2) h3 {
+  .section__menu h3 {
     width: 50px;
   }
-  .section__menu:not(h2) .column {
+  .section__menu .column {
     width: 32%;
     margin: 0;
     display: block;
   }
-  .section__menu:not(h2) div {
-    width: 90%;
+  .section__menu div:not(.column):active .coche {
+    animation: animation_coche 1s;
+    animation-fill-mode: forwards;
   }
-  .section__menu:not(h2) div:hover .coche {
-    animation: animation-coche 1s;
-    animation-fill-mode: both;
-  }
-  .section__menu:not(h2) div:hover .coche i {
+  .section__menu div:not(.column):active .coche i {
     animation: rotate_coche 2s;
   }
-}
-@media all and (min-width: 1024px) {
+
   .btn__fonctionnement {
     width: 31%;
   }
