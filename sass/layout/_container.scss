@@ -28,16 +28,15 @@ figure {
 @media all and (max-width: 768px) {
   @include section;
   @include heart;
-  
   .btn__gradient-commande {
       height: min-content;
       transform: translate(50%);
     }
-    div:hover .coche{
-      animation: animation-coche 1s;
+    div:not(.column):hover .coche{
+      animation: animation_coche 1s;
       animation-fill-mode: both;
       i {
-        animation: rotate 1s;
+        animation: rotate_coche 2s;
       }
     }
     .section__menu h2{
@@ -86,12 +85,12 @@ figure {
         margin: 0;
         display: block;
       }
-      div:hover .coche{
-        animation: animation-coche 1s;
+      div:not(.column):hover .coche{
+        animation: animation_coche 1s;
         animation-fill-mode: both;
         i {
-          animation: rotate 1s;
-        }
+          animation: rotate_coche 2s;
+}
       }
       }
     }
@@ -117,11 +116,7 @@ figure {
   img {
     height: 20em;
   }
-  div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
+  
 
   .section {
     &__restaurants {
@@ -136,7 +131,7 @@ figure {
       }
     }
 
-    &__menu:not(h2) {
+    &__menu{
       h2 {
         width: 100%;
         font-weight: lighter;
@@ -153,13 +148,12 @@ figure {
         display: block;
       }
       div {
-        width: 90%;
-        &:hover .coche{
-          animation: animation-coche 1s;
-          animation-fill-mode: both;
+        &:not(.column):active .coche{
+          animation: animation_coche 1s;
+          animation-fill-mode: forwards;
           i {
-            animation: rotate 1s;
-          }
+            animation: rotate_coche 2s;
+}
         }
       }
     }
