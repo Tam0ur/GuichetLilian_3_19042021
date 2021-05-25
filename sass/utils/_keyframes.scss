@@ -13,16 +13,16 @@
   }
 }
 
-@keyframes animation-coche{
+@keyframes animation_coche{
   0%{
-    transform: translateX(0px);
+    width: 0px;
   }
   100%{
-    transform: translateX(-100%);
+    width: 70px;
   }
 }
 
-@keyframes rotate{
+@keyframes rotate_coche{
   0%{
     transform: rotate(0deg);
   }
@@ -44,6 +44,7 @@
     opacity: 1;
   }
 }
+
 
 @keyframes loader{
   0%{
