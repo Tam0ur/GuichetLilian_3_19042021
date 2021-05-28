@@ -14,14 +14,6 @@
     opacity: 1;
   }
 }
-@keyframes animation_coche {
-  0% {
-    width: 0px;
-  }
-  100% {
-    width: 70px;
-  }
-}
 @keyframes rotate_coche {
   0% {
     transform: rotate(0deg);
@@ -88,7 +80,7 @@ main {
   background-color: #f6f6f6;
 }
 
-section:not(section:first-child) {
+section:not(.section__intro) {
   padding: 15px;
 }
 
@@ -261,6 +253,7 @@ button:hover {
   top: 0;
   height: 100%;
   right: 0;
+  transition: width 1s;
 }
 .coche i {
   color: #fff;
@@ -310,7 +303,7 @@ footer * {
 }
 
 /*NAV*/
-a:not(footer a) {
+a:not(.footer__a) {
   color: #000;
   text-decoration: none;
 }
@@ -343,7 +336,7 @@ figure figcaption p {
     text-align: center;
     padding-bottom: 30px;
   }
-  .section__intro p:not(p:nth-child(3)) {
+  .section__intro p:not(.exception__p) {
     background-color: #eaeaea;
     padding: 15px;
     margin: 0;
@@ -405,6 +398,7 @@ figure figcaption p {
 
   .heart {
     background: linear-gradient(#9356DC, #FF79DA);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
@@ -421,11 +415,10 @@ figure figcaption p {
     transform: translate(50%);
   }
 
-  div:not(.column):hover .coche {
-    animation: animation_coche 1s;
-    animation-fill-mode: both;
+  div.margin__menu:active .coche {
+    width: 70px;
   }
-  div:not(.column):hover .coche i {
+  div.margin__menu:active .coche i {
     animation: rotate_coche 2s;
   }
 
@@ -438,18 +431,12 @@ figure figcaption p {
     height: 15em;
   }
 
-  div:not(div:first-child, .column) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
   .section__intro {
     background-color: #f6f6f6;
     text-align: center;
     padding-bottom: 30px;
   }
-  .section__intro p:not(p:nth-child(3)) {
+  .section__intro p:not(.exception__p) {
     background-color: #eaeaea;
     padding: 15px;
     margin: 0;
@@ -511,6 +498,7 @@ figure figcaption p {
 
   .heart {
     background: linear-gradient(#9356DC, #FF79DA);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
@@ -547,11 +535,10 @@ figure figcaption p {
     margin: 0;
     display: block;
   }
-  .section__menu:not(h3) div:not(.column):hover .coche {
-    animation: animation_coche 1s;
-    animation-fill-mode: both;
+  .section__menu:not(h3) div.margin__menu:active .coche {
+    width: 70px;
   }
-  .section__menu:not(h3) div:not(.column):hover .coche i {
+  .section__menu:not(h3) div.margin__menu:active .coche i {
     animation: rotate_coche 2s;
   }
 
@@ -573,7 +560,7 @@ figure figcaption p {
     text-align: center;
     padding-bottom: 30px;
   }
-  .section__intro p:not(p:nth-child(3)) {
+  .section__intro p:not(.exception__p) {
     background-color: #eaeaea;
     padding: 15px;
     margin: 0;
@@ -635,6 +622,7 @@ figure figcaption p {
 
   .heart {
     background: linear-gradient(#9356DC, #FF79DA);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     position: absolute;
@@ -678,11 +666,10 @@ figure figcaption p {
     margin: 0;
     display: block;
   }
-  .section__menu div:not(.column):active .coche {
-    animation: animation_coche 1s;
-    animation-fill-mode: forwards;
+  .section__menu div.margin__menu:active .coche {
+    width: 70px;
   }
-  .section__menu div:not(.column):active .coche i {
+  .section__menu div.margin__menu:active .coche i {
     animation: rotate_coche 2s;
   }
 
