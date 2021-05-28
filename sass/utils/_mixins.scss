@@ -62,6 +62,7 @@
   }
   .heart {
     background: linear-gradient(#9356DC, #FF79DA);
+    background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       position: absolute;
@@ -83,7 +84,7 @@
       text-align: center;
 
       padding-bottom: 30px;
-      p:not(p:nth-child(3)) {
+      p:not(.exception__p) {
         background-color: #eaeaea;
         padding: 15px;
         margin: 0;
