@@ -15,7 +15,7 @@ main {
   background-color: $color-grey;
 }
 
-section:not(section:first-child) {
+section:not(.section__intro) {
   padding: 15px;
 }
 
