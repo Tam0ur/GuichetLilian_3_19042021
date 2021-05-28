@@ -32,11 +32,12 @@ figure {
       height: min-content;
       transform: translate(50%);
     }
-    div:not(.column):hover .coche{
-      animation: animation_coche 1s;
-      animation-fill-mode: both;
-      i {
-        animation: rotate_coche 2s;
+    div {
+      &.margin__menu:active .coche{
+        width: 70px;
+        i {
+          animation: rotate_coche 2s;
+        }
       }
     }
     .section__menu h2{
@@ -51,11 +52,6 @@ figure {
   
   img {
     height: 15em;
-  }
-  div:not(div:first-child, .column) {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
   }
   @include section;
   @include heart;
@@ -85,12 +81,13 @@ figure {
         margin: 0;
         display: block;
       }
-      div:not(.column):hover .coche{
-        animation: animation_coche 1s;
-        animation-fill-mode: both;
-        i {
-          animation: rotate_coche 2s;
-}
+      div {
+        &.margin__menu:active .coche{
+          width: 70px;
+          i {
+            animation: rotate_coche 2s;
+          }
+        }
       }
       }
     }
@@ -148,12 +145,11 @@ figure {
         display: block;
       }
       div {
-        &:not(.column):active .coche{
-          animation: animation_coche 1s;
-          animation-fill-mode: forwards;
+        &.margin__menu:active .coche{
+          width: 70px;
           i {
             animation: rotate_coche 2s;
-}
+          }
         }
       }
     }
