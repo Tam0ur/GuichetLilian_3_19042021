@@ -29,10 +29,12 @@
   0% {
     transform: scale(0);
     opacity: 0;
+    animation-play-state: paused;
   }
   100% {
     transform: scale(1);
     opacity: 1;
+    animation-play-state: paused;
   }
 }
 @keyframes loader {
@@ -208,7 +210,7 @@ button:hover {
 }
 
 .loader {
-  animation: loader 1s;
+  animation: loader 5s;
   animation-fill-mode: forwards;
   z-index: 1;
   position: fixed;
@@ -341,6 +343,9 @@ figure figcaption p {
     padding: 15px;
     margin: 0;
   }
+  .exception__p{
+    white-space:initial;
+  }
   .section__fonctionnement {
     background-color: #fff;
     display: block;
@@ -441,9 +446,6 @@ figure figcaption p {
     padding: 15px;
     margin: 0;
   }
-  .exception__p{
-    white-space : initial;
-  }  
   .section__fonctionnement {
     background-color: #fff;
     display: block;
@@ -513,6 +515,10 @@ figure figcaption p {
     animation-fill-mode: forwards;
   }
 
+  .section__fonctionnement div {
+    display: flex;
+    justify-content: space-between;
+  }
   .section__restaurants {
     display: flex;
     flex-flow: row wrap;
@@ -641,6 +647,10 @@ figure figcaption p {
     height: 20em;
   }
 
+  .section__fonctionnement div {
+    display: flex;
+    justify-content: space-between;
+  }
   .section__restaurants {
     display: flex;
     flex-flow: row wrap;
