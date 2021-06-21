@@ -441,6 +441,9 @@ figure figcaption p {
     padding: 15px;
     margin: 0;
   }
+  .exception__p{
+    white-space : initial;
+  }  
   .section__fonctionnement {
     background-color: #fff;
     display: block;
